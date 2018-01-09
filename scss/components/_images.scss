@@ -1,0 +1,27 @@
+// ==========================================================================
+// Image
+//    .img--logo
+//    .img--frame
+//    .img--avatar
+// ==========================================================================
+
+.img {
+  @include m(logo) {
+    @include flexy;
+    margin: auto;
+  }
+
+  @include m(avatar) {
+    @include roundy(199px);
+    display: block;
+    margin: auto;
+  }
+
+  @include m(frame) {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid palette(grey, x-light);
+    padding: em(12px);
+    margin-bottom: em(24px);
+  }
+}

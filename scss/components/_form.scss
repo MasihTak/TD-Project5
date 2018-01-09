@@ -1,0 +1,36 @@
+// ==========================================================================
+// Form
+//   .form
+//   .form__label--hidden
+//   .form__input
+// ==========================================================================
+
+// Form elements
+
+.form {
+  @include e(label) {
+    @include m(hidden) {
+      @extend .srt;
+    }
+    display: block;
+    margin-bottom: em(10px);
+  }
+
+  @include e(input) {
+    @extend %br;
+		@include text(em(18px), $color: palette(black, light));
+		display: block;
+		outline: 0;
+		border: 0;
+    width: 100%;
+    padding: em(15px, 18px);
+    margin-bottom: em(20px, 18px);
+    border-bottom: 6px solid $viking;
+    &:focus {
+      border-color: darken($viking, 20%);
+    }
+  }
+  .btn--default {
+    width: 100%;
+  }
+}

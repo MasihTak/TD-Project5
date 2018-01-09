@@ -1,0 +1,31 @@
+// ==========================================================================
+// Buttons
+// 	 .btn--default
+// 	 .btn--success
+// 	 .btn--error
+// 	 .btn--warning
+// 	 .btn--info
+// ==========================================================================
+
+.btn {
+	@include bg-colors($ui-colors);
+}
+
+[class^="btn--"] {
+  @extend %btn;
+  margin-bottom: em(20px, 14px);
+  width: 100%;
+  display: block;
+  margin-right: em(15px, 14px);
+	font-size: em(14px);
+	@include mq(med) {
+		display: inline-block;
+		width: 17%;
+		margin: 20px 8px;
+	}
+	@include mq(lg) {
+		font-size: em(16px);
+		width: 14%;
+		margin: 20px 25px;
+	}
+}

@@ -1,0 +1,23 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+
+/* BASE STYLE */
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+p {
+  letter-spacing: 1px;
+}
+
+// Lists
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

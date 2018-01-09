@@ -1,0 +1,34 @@
+// ==========================================================================
+// Navigation
+//   .nav__item
+// ==========================================================================
+
+.nav {
+  @include flexy($dir: column);
+  @extend %centered;
+  margin-top: em(20px);
+  margin-bottom: em(30px);
+  @include e(item) {
+    margin: 0 em(12px);
+    a {
+      @include text(em(18px), $weight:  $font-weight--light, $color: palette(grey));
+      text-decoration: none;
+      display: block;
+      padding: em(8px, 18px);
+      &:hover {
+        background-color: $viking;
+        color: $white;
+        border-radius: 5px;
+      }
+    }
+    @include mq(med) {
+      display: inline-block;
+    }
+  }
+  @include mq(med) {
+    @include flexy($dir: row, $just: space-between);
+  }
+  @include mq(lg) {
+    @include flexy($just: center);
+  }
+}

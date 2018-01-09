@@ -1,0 +1,90 @@
+// ==========================================================================
+// placeholders
+// ==========================================================================
+
+// Center text
+%centered {
+  text-align: center;
+}
+
+// Border radius
+%br {
+  border-radius: 10px;
+}
+
+// Headlines
+%hdln-prim {
+  @include text(em(32px), (36px / 32px), $font-weight--ultra-bold, $viking, $font-family-primary);
+  margin-bottom: em(50px, 32px);
+  margin-left: 15px;
+  @include mq(med){
+    @include text(em(38px), (40px / 38px));
+  }
+}
+
+%hdln-sec {
+  @include text(em(20px), $weight: $font-weight--light, $color: palette(grey), $family: $font-family-primary);
+  letter-spacing: $letter-space;
+  margin-bottom: 1em;
+}
+
+// Button
+%btn {
+  @extend %br;
+  display: block;
+  padding: 15px 30px;
+  border: 0;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: $font-weight--medium;
+  transition: opacity $trns-duration;
+  &:hover {
+    opacity: .75;
+  }
+  &:active {
+    opacity: initial;
+  }
+}
+
+// Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Screen reader text
+
+.srt {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+// For pseudo-elements
+
+%pseudos {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+%col {
+  float: left;
+  padding: 0 10px;
+  margin-left: 2%;
+}
+
+.centered {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}

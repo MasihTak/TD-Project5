@@ -1,0 +1,42 @@
+// ==========================================================================
+// Typography:
+//   .container
+//   .link
+//   .blockquote
+//   .headline--primary
+//   .headline--secondary
+// ==========================================================================
+
+
+.card p {
+  @include text(em(18px), (27px / 18px), $font-weight--light, palette(gray, light));
+  @include mq(med) {
+    @include text(em(20px));
+  }
+}
+
+
+.link {
+  @include text(em(18px), $weight: $font-weight--bold, $color: $malibu);
+  letter-spacing: 0;
+}
+
+.blockquote {
+  @extend %br;
+  @include text(em(24px), $weight: $font-weight--light, $color: palette(gray, light));
+  font-style: italic;
+  margin: em(32px, 24px) 0;
+  margin-left: em(18px);
+  padding: 0 0 0 5%;
+  border-left: solid em(8px, 24px) $viking;
+}
+
+//  Headlines
+.headline {
+  @include m(primary) {
+    @extend %hdln-prim;
+  }
+  @include m(secondary) {
+    @extend %hdln-sec;
+  }
+}
